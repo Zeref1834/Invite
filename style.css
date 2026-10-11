@@ -1,0 +1,1129 @@
+:root {
+  --red: #8f1d2c;
+  --red-dark: #5e101c;
+  --cream: #fbf7ef;
+  --gold: #b89455;
+  --text: #382a25;
+  --muted: #806f67;
+  --white: #fffdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--cream);
+  font-family: "Be Vietnam Pro", sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .16;
+  background-image: radial-gradient(#8f1d2c 0.7px, transparent 0.7px);
+  background-size: 18px 18px;
+  z-index: -1;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 5vw, 3.3rem);
+  margin-bottom: 14px;
+}
+
+a {
+  color: inherit;
+}
+
+.hero {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(70, 8, 18, .86), rgba(143, 29, 44, .72)),
+    url("assets/hero3.jpg") center/cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(255, 255, 255, .45);
+}
+
+.hero-content {
+  position: relative;
+  padding: 60px 24px;
+  max-width: 900px;
+}
+
+.eyebrow,
+.section-label {
+  letter-spacing: .3em;
+  font-size: 3rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.eyebrow {
+  font-family: "MonteCarlo", cursive;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.intro {
+  opacity: .9;
+}
+
+.couple {
+  margin: 28px 0;
+  display: grid;
+  gap: 4px;
+}
+
+.couple span {
+  font-size: .7rem;
+  letter-spacing: .25em;
+  opacity: .8;
+}
+
+.couple strong {
+  font-family: "MonteCarlo", cursive;
+  font-size: clamp(3.4rem, 11vw, 6.5rem);
+  font-weight: 400;
+  line-height: .9;
+}
+
+.couple i {
+  font-family: "MonteCarlo", serif;
+  font-size: 2.6rem;
+  color: #ead19a;
+  font-style: normal;
+}
+
+/* .date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  letter-spacing: .12em;
+  font-size: .75rem;
+}
+
+.date b {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #e7cb8d;
+  font-weight: 400;
+} */
+
+.scroll-down {
+  display: inline-block;
+  margin-top: 55px;
+  font-size: 2rem;
+  text-decoration: none;
+  animation: bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(9px);
+  }
+}
+
+.section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 22px;
+  text-align: center;
+}
+
+.section-label {
+  color: var(--red);
+  margin-bottom: 15px;
+}
+
+.story-section {
+  padding: 0px 22px;
+}
+
+.ornament {
+  color: var(--gold);
+  font-size: 2rem;
+  margin: 15px 0 28px;
+}
+
+.story {
+  max-width: 680px;
+  margin: 0 auto 15px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* .photo-section,
+.invitation-photo-section {
+  padding: 30px 22px;
+} */
+
+.invitation-photo {
+    position: relative;
+}
+
+.invitation-img {
+    position: relative;
+    z-index: 1;
+}
+
+.invitation-text {
+    position: absolute;
+    bottom: 75px;
+    padding: 0px 20px;
+    left: 50%;
+    height: 150px;
+    transform: translateX(-50%);
+    width: 75%;
+    z-index: 2;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .75), rgba(255, 250, 248, .60));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.photo-frame img {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+  border: 10px solid var(--white);
+  box-shadow: 0 18px 55px rgba(64, 30, 20, .15);
+  background: #eee5d9;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.photo-placeholder {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-family: "Playfair Display", serif;
+  color: var(--gold);
+  letter-spacing: .2em;
+  line-height: 2;
+}
+
+.photo-frame:not(.placeholder) .photo-placeholder {
+  display: none;
+}
+
+.details {
+  max-width: 1100px;
+}
+
+.details {
+  width: 100%;
+  padding: 55px 15px 40px;
+  color: #222;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.details * {
+  box-sizing: border-box;
+}
+
+.details > h2 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.ornament {
+  margin: 12px 0 30px;
+  font-family: serif;
+  font-size: 27px;
+  color: #a58b70;
+}
+
+.wedding-infor {
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+/* Tiêu đề chữ viết tay */
+.wedding-infor h3 {
+  margin: 0 0 23px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 25px;
+  font-weight: 400;
+  color: #777;
+}
+
+/* Giờ tổ chức */
+.wedding-time {
+  margin: 0 0 13px;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+/* Bố cục ngày tháng */
+.wedding-date {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 100px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.date-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  height: 32px;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+}
+
+.date-side span {
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.date-number {
+  font-size: 65px;
+  font-weight: 400;
+  line-height: 1;
+  color: #111;
+}
+
+/* Dòng chú thích ngày */
+.lunar-date {
+  margin: 18px 0 48px;
+  font-size: 11px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #444;
+}
+
+/* Địa điểm tổ chức */
+.venue-info {
+  margin-bottom: 28px;
+}
+
+.venue-info h3 {
+  margin-bottom: 25px;
+}
+
+.venue-info strong {
+  display: block;
+  margin: 5px 0;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.venue-address {
+  margin: 14px auto 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* Tiêu đề bản đồ */
+.map-heading {
+  margin: 35px 0 15px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 26px;
+  color: #777;
+}
+
+/* Google Maps */
+.wedding-map {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #f4f0e7;
+  border-radius: 0;
+}
+
+.wedding-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Nút mở chỉ đường */
+.map-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 12px 20px;
+  border: 1px solid #e5dfd5;
+  background: #fff;
+  color: #6e5a45;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.map-button:hover {
+  background: #8f7962;
+  color: #fff;
+}
+
+.countdown-section {
+  color: #fff;
+  padding: 90px 22px 0px 22px;
+  text-align: center;
+  justify-items: center;
+}
+
+.countdown-inner h2 {
+  color: var(--red);
+  margin: 20px auto 20px;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 720px;
+}
+
+.time-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  aspect-ratio: 1 / 1;
+  background-color: var(--red);
+  border-radius: 8px;
+  color: white;
+  border: none;
+  box-sizing: border-box;
+}
+
+.countdown div:last-child {
+  border: 0;
+}
+
+.countdown b {
+  display: block;
+  font-size: clamp(2rem, 7vw, 4rem);
+  font-weight: 400;
+}
+
+.countdown span {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  opacity: .75;
+}
+
+.gallery-carousel {
+  max-width: 720px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #f8f5f0;
+}
+
+.gallery-carousel .carousel-item img {
+  display: block;
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery-carousel .carousel-control-prev,
+.gallery-carousel .carousel-control-next {
+  width: 12%;
+}
+
+.gallery-carousel .carousel-control-prev-icon,
+.gallery-carousel .carousel-control-next-icon {
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(70, 60, 50, 0.65);
+  background-size: 55%;
+}
+
+.gallery-carousel .carousel-indicators {
+  margin-bottom: 14px;
+}
+
+.gallery-carousel .carousel-indicators button {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+@media (max-width: 767px) {
+  .gallery-carousel {
+    max-width: 100%;
+  }
+
+  
+}
+
+.rsvp form {
+  max-width: 550px;
+  margin: 35px auto 0;
+  display: grid;
+  gap: 12px;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  border: 1px solid #d7c7b7;
+  padding: 15px 16px;
+  font: inherit;
+  background: rgba(255, 255, 255, .75);
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+button {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+  cursor: pointer;
+  letter-spacing: .1em;
+  font-weight: 600;
+}
+
+button:hover {
+  background: none;
+}
+
+.success {
+  display: none;
+  margin: 25px auto;
+  padding: 16px;
+  color: var(--red);
+}
+
+footer {
+  padding: 60px 20px;
+  background: #3f2024;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-names {
+  font-family: "MonteCarlo", cursive;
+  font-size: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+.name-left {
+  text-align: right;
+}
+
+.name-and {
+  text-align: center;
+  font-family: "MonteCarlo", cursive;
+  color: #d9b96f;
+}
+
+.name-right {
+  text-align: left;
+}
+
+footer p {
+  opacity: .7;
+}
+
+.copyright {
+  font-size: .75rem;
+  letter-spacing: .15em;
+}
+
+.music-btn {
+  position: fixed;
+  z-index: 20;
+  right: 20px;
+  top: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .6);
+  background: rgba(60, 15, 20, .72);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  font-size: 1.2rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.petal {
+  position: fixed;
+  top: -30px;
+  width: 10px;
+  height: 15px;
+  background: #e8b7bd;
+  border-radius: 80% 20% 80% 20%;
+  pointer-events: none;
+  z-index: 10000;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translate3d(var(--x), 110vh, 0) rotate(720deg);
+    opacity: .1;
+  }
+}
+
+
+/* =========================================
+   MÀN HÌNH MỞ THIỆP - SONG HỶ
+========================================= */
+
+body.locked {
+  overflow: hidden;
+}
+
+
+/* -----------------------------------------
+   LỚP BAO PHỦ TOÀN MÀN HÌNH
+----------------------------------------- */
+
+.gate-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #5a0001;
+
+  display: flex;
+
+  transition:
+    visibility 1.2s ease,
+    opacity 1.2s ease;
+}
+
+
+/* -----------------------------------------
+   HAI CÁNH CỬA
+----------------------------------------- */
+
+.gate-half {
+  position: absolute;
+
+  top: 0;
+  width: 50%;
+  height: 100%;
+
+  overflow: hidden;
+
+  z-index: 2;
+
+  transition:
+    transform 1.5s cubic-bezier(.77, 0, .18, 1);
+}
+
+/* Hình bên trong phải có kích thước
+   bằng TOÀN BỘ màn hình */
+
+.gate-half img {
+  position: absolute;
+
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  max-width: none;
+
+  object-fit: cover;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* -----------------------------------------
+   CÁNH TRÁI
+----------------------------------------- */
+
+.gate-left {
+  left: 0;
+}
+
+.gate-left img {
+  left: 0;
+}
+
+
+/* -----------------------------------------
+   CÁNH PHẢI
+----------------------------------------- */
+
+.gate-right {
+  right: 0;
+}
+
+.gate-right img {
+  right: 0;
+}
+
+
+/* =========================================
+   NÚT SONG HỶ NHẤP NHÁY
+========================================= */
+
+.double-happiness {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 10;
+
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+
+  border: 3px solid rgba(255, 231, 170, .9);
+
+  background:
+    radial-gradient(circle at 35% 30%,
+      #ff3131,
+      #d40000 55%,
+      #9d0000);
+
+  color: #ffe7a8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 0 8px rgba(255, 225, 160, .15),
+    0 0 30px rgba(255, 210, 100, .35),
+    0 15px 40px rgba(0, 0, 0, .35);
+
+  /* ⭐ Hiệu ứng phóng to / thu nhỏ */
+  animation: happinessPulse 1.5s ease-in-out infinite;
+
+  transition:
+    opacity .45s ease,
+    box-shadow .3s ease;
+}
+
+/* =========================
+   CHỮ SONG HỶ
+========================= */
+
+.double-happiness span {
+  display: block;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 10rem;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  /* Căn chỉnh thị giác */
+  transform: translate(3px, 1px);
+}
+
+/* =========================================
+   HIỆU ỨNG PHÓNG TO / THU NHỎ
+========================================= */
+
+@keyframes happinessPulse {
+
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+}
+
+
+/* Hover */
+
+.double-happiness:hover {
+
+  /* Dừng animation */
+  animation-play-state: paused;
+
+  /* Giữ nguyên kích thước */
+  transform: translate(-50%, -50%) scale(1);
+
+  /* Giữ nguyên màu */
+  background:
+    radial-gradient(circle at 35% 30%,
+      #ff3131,
+      #d40000 55%,
+      #9d0000);
+
+  color: #ffe7a8;
+
+  /* Không đổi shadow */
+  box-shadow:
+    0 0 0 8px rgba(255, 225, 160, .15),
+    0 0 30px rgba(255, 210, 100, .35),
+    0 15px 40px rgba(0, 0, 0, .35);
+}
+
+
+/* Hiệu ứng nhấn */
+
+.double-happiness:active {
+  transform: translate(-50%, -50%) scale(.95);
+}
+
+
+/* -----------------------------------------
+   KHI BẮT ĐẦU MỞ
+----------------------------------------- */
+
+.gate-screen.is-opening .gate-left {
+  transform: translateX(-100%);
+}
+
+.gate-screen.is-opening .gate-right {
+  transform: translateX(100%);
+}
+
+
+/* Song hỷ biến mất */
+
+.gate-screen.is-opening .double-happiness {
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%) scale(.5);
+
+  pointer-events: none;
+}
+
+
+/* -----------------------------------------
+   SAU KHI MỞ XONG
+----------------------------------------- */
+
+.gate-screen.is-opened {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* -----------------------------------------
+   TABLET
+----------------------------------------- */
+
+@media (max-width: 768px) {
+
+  .hero {
+    background:
+      linear-gradient(135deg, rgba(70, 8, 18, .86), rgba(143, 29, 44, .72)),
+      url("assets/hero2.jpg") center/cover;
+  }
+
+  .double-happiness {
+    width: 175px;
+    height: 175px;
+  }
+
+  .double-happiness span {
+    font-size: 6rem;
+  }
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 650px) {
+
+  .hero {
+    background:
+      linear-gradient(135deg, rgba(70, 8, 18, .86), rgba(143, 29, 44, .72)),
+      url("assets/hero.jpg") center/cover;
+  }
+
+  .gate-half img {
+    object-fit: cover;
+  }
+
+  .double-happiness {
+    width: 78px;
+    height: 78px;
+
+    font-size: 3.2rem;
+  }
+
+  .double-happiness {
+    width: 100px;
+    height: 100px;
+  }
+
+  .double-happiness span {
+    font-size: 3.2rem;
+  }
+
+  .hero-overlay {
+    inset: 10px;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown b {
+    font-size: 2rem;
+  }
+
+  .countdown span {
+    font-size: .6rem;
+  }
+
+  .footer-names {
+    display: contents;
+  }
+
+  .name-left,
+  .name-right {
+    text-align: center;
+  }
+
+  .invitation-text {
+    bottom: 25px;
+    height: 100px;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .details {
+    padding: 40px 15px 30px;
+  }
+
+  .details > h2 {
+    font-size: 23px;
+  }
+
+  .ornament {
+    margin-bottom: 26px;
+  }
+
+  .wedding-infor h3 {
+    font-size: 23px;
+  }
+
+  .wedding-time {
+    font-size: 17px;
+  }
+
+  .wedding-date {
+    grid-template-columns: minmax(0, 1fr) 76px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .date-side {
+    height: 31px;
+  }
+
+  .date-side span {
+    font-size: clamp(13px, 3.8vw, 17px);
+  }
+
+  .date-number {
+    font-size: 57px;
+  }
+
+  .lunar-date {
+    margin: 16px 0 42px;
+    font-size: 10px;
+  }
+
+  .venue-info strong {
+    font-size: 20px;
+  }
+
+  .venue-address {
+    font-size: 12px;
+  }
+
+  .wedding-map {
+    height: 230px;
+  }
+
+  .gallery-carousel .carousel-item img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* -----------------------------------------
+   PC
+----------------------------------------- */
+
+@media (min-width: 768px) {
+  .details {
+    padding: 70px 20px 55px;
+  }
+
+  .details > h2 {
+    font-size: 32px;
+  }
+
+  .ornament {
+    font-size: 32px;
+    margin: 15px 0 35px;
+  }
+
+  .wedding-infor {
+    max-width: 560px;
+  }
+
+  .wedding-infor h3 {
+    font-size: 30px;
+  }
+
+  .wedding-time {
+    font-size: 22px;
+  }
+
+  .wedding-date {
+    grid-template-columns: minmax(0, 1fr) 120px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .date-side {
+    height: 38px;
+  }
+
+  .date-side span {
+    font-size: 21px;
+  }
+
+  .date-number {
+    font-size: 78px;
+  }
+
+  .lunar-date {
+    font-size: 13px;
+    margin: 20px 0 55px;
+  }
+
+  .venue-info strong {
+    font-size: 25px;
+  }
+
+  .venue-address {
+    font-size: 15px;
+  }
+
+  .map-heading {
+    font-size: 30px;
+  }
+
+  .wedding-map {
+    height: 350px;
+  }
+
+  .map-button {
+    font-size: 14px;
+    padding: 14px 24px;
+  }
+}
+
+
+/* -----------------------------------------
+   SCROLL
+----------------------------------------- */
+.content {
+  height: 100vh;
+  overflow-y: auto;
+}
