@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thiệp cưới online - trân trọng kính mời quý khách đến chung vui."
+    />
+    <title>KhánhLinh & AnhTú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Great+Vibes&family=MonteCarlo&family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style-QN.css" />
+  </head>
+  <body>
+    <div id="gateScreen" class="gate-screen" aria-label="Mở thiệp cưới">
+      <div class="gate-half gate-left">
+        <img class="gate-half-bg" src="assets/mo-thiep-bg.png" alt="" />
+      </div>
+
+      <div class="gate-half gate-right">
+        <img class="gate-half-bg" src="assets/mo-thiep-bg.png" alt="" />
+      </div>
+
+      <button
+        id="openInvitation"
+        class="double-happiness"
+        type="button"
+        aria-label="Mở thiệp cưới"
+      >
+        <span>囍</span>
+      </button>
+    </div>
+
+    <div id="petals"></div>
+
+    <button class="music-btn" id="musicBtn" aria-label="Bật tắt nhạc">♫</button>
+    <audio id="music" loop>
+      <source src="assets/A Little Love.mp3" type="audio/mpeg" />
+    </audio>
+
+    <main id="content" class="content">
+      <section class="hero reveal">
+        <div class="hero-content">
+          <p class="eyebrow">Ngày chung đôi</p>
+          <div class="couple">
+            <strong>Khánh Linh</strong>
+            <i>&</i>
+            <strong>Anh Tú</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="countdown-section reveal">
+        <div class="countdown-inner">
+          <div class="countdown" id="countdown">
+            <div class="time-frame"><b id="days">00</b><span>Ngày</span></div>
+            <div class="time-frame"><b id="hours">00</b><span>Giờ</span></div>
+            <div class="time-frame">
+              <b id="minutes">00</b><span>Phút</span>
+            </div>
+            <div class="time-frame">
+              <b id="seconds">00</b><span>Giây</span>
+            </div>
+          </div>
+          <h2>WELCOME TO OUR WEDDING</h2>
+          <p class="story">
+            Gửi đến bạn bè thân mến. Cám ơn bạn đã dành thời gian quý báu để
+            cùng chúng mình chung vui trong ngày đặc biệt này. Chúng mình vô
+            cùng biết ơn vì luôn có sự đồng hành và ủng hộ của bạn, và thật vinh
+            hạnh khi được chia sẽ niềm hạnh phúc của chúng mình cùng bạn.
+          </p>
+        </div>
+      </section>
+
+      <section class="section invitation-photo-section reveal">
+        <div class="invitation-photo">
+          <div class="invitation-text">
+            Trân trọng kính mời bạn đến dự<br />
+            lễ cưới của chúng mình.
+          </div>
+          <div class="invitation-img">
+            <div class="photo-frame">
+              <img
+                src="assets/Invitation2.jpg"
+                alt="Ảnh cô dâu chú rể"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.classList.add('placeholder');
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="story" class="section story-section reveal">
+        <h2>Hai trái tim, một hành trình</h2>
+        <div class="ornament">❦</div>
+        <p class="story">
+          Từ một cuộc gặp gỡ bình dị, chúng mình đã cùng nhau đi qua những ngày
+          vui, những lúc khó khăn và nhận ra rằng điều tuyệt vời nhất là có một
+          người đồng hành bên cạnh.<br />
+          Và hôm nay, chúng mình muốn viết tiếp câu chuyện ấy bằng một lời hứa
+          trọn đời.
+        </p>
+      </section>
+
+      <section class="section photo-section reveal">
+        <div class="photo-frame">
+          <img
+            src="assets/couple-QN.jpg"
+            alt="Ảnh cô dâu chú rể"
+            onerror="
+              this.style.display = 'none';
+              this.parentElement.classList.add('placeholder');
+            "
+          />
+          <div class="photo-placeholder">ẢNH<br />CÔ DÂU & CHÚ RỂ</div>
+        </div>
+      </section>
+
+      <section class="section details reveal" id="wedding-details">
+        <h2>Thông tin tiệc cưới</h2>
+        <div class="ornament">❦</div>
+
+        <div class="wedding-infor">
+          <h3>Hôn lễ được tổ chức vào</h3>
+
+          <p class="wedding-time">10:00, THỨ BA</p>
+
+          <div class="wedding-date">
+            <div class="date-side">
+              <span>THÁNG 11</span>
+            </div>
+
+            <div class="date-number">24</div>
+
+            <div class="date-side">
+              <span>NĂM 2026</span>
+            </div>
+          </div>
+
+          <div class="venue-info">
+            <h3>Trân trọng kính mời bạn</h3>
+
+            <strong>Tại tư gia</strong>
+
+            <p class="venue-address">
+              THÔN 1, XÃ NGHĨA DŨNG (CŨ)<br />
+              THÔN NGHĨA DÕNG, XÃ AN PHÚ (MỚI)
+            </p>
+          </div>
+
+          <div class="map-heading">Địa điểm tổ chức</div>
+
+          <div class="wedding-map">
+            <iframe
+              src="https://maps.google.com/maps?q=4R9V%2BQJC%2C%20An%20Ph%C3%BA%2C%20Qu%E1%BA%A3ng%20Ng%C3%A3i%2C%20Vi%E1%BB%87t%20Nam&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Tiệc cưới tư gia"
+            ></iframe>
+          </div>
+
+          <a
+            class="map-button"
+            href="https://www.google.com/maps/place/Nh%C3%A0+%C3%94ng+Tuy%C3%AAn/@15.1191639,108.8443251,1049m/data=!3m2!1e3!4b1!4m6!3m5!1s0x316853002d10aea7:0x79d41924008aedf9!8m2!3d15.1191639!4d108.8443251!16s%2Fg%2F11z0pgwc_s"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Xem chỉ đường trên Google Maps ↗
+          </a>
+        </div>
+      </section>
+
+      <section class="section gallery-section reveal">
+        <h2>Khoảnh khắc của chúng mình</h2>
+        <div class="ornament">❦</div>
+        <div
+          id="weddingGallery"
+          class="carousel slide gallery-carousel"
+          data-bs-ride="carousel"
+          data-bs-interval="4000"
+        >
+          <!-- Các chấm chỉ báo -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#weddingGallery"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Ảnh 1"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#weddingGallery"
+              data-bs-slide-to="1"
+              aria-label="Ảnh 2"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#weddingGallery"
+              data-bs-slide-to="2"
+              aria-label="Ảnh 3"
+            ></button>
+          </div>
+
+          <!-- Danh sách ảnh -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="assets/VXT_2453.jpg"
+                class="d-block w-100"
+                alt="Kỷ niệm 1"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="assets/VXT_2455.jpg"
+                class="d-block w-100"
+                alt="Kỷ niệm 2"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="assets/VXT_2458.jpg"
+                class="d-block w-100"
+                alt="Kỷ niệm 3"
+              />
+            </div>
+          </div>
+
+          <!-- Nút chuyển ảnh -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#weddingGallery"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Ảnh trước</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#weddingGallery"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Ảnh tiếp theo</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section rsvp reveal">
+        <h2>Xác nhận tham dự</h2>
+        <p>Chúng mình rất mong được đón tiếp bạn trong ngày đặc biệt này.</p>
+        <form id="rsvpForm">
+          <input
+            id="guestName"
+            type="text"
+            placeholder="Tên của bạn"
+            required
+          />
+          <select id="attendance">
+            <option value="yes">Mình sẽ tham dự ❤️</option>
+            <option value="no">Mình rất tiếc không thể tham dự</option>
+          </select>
+          <textarea
+            id="message"
+            placeholder="Lời chúc dành cho cô dâu chú rể"
+          ></textarea>
+          <button type="submit">GỬI XÁC NHẬN</button>
+        </form>
+        <div class="success" id="success">
+          Cảm ơn bạn! Hẹn gặp bạn trong ngày vui của chúng mình ❤️
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-names">
+          <div class="name-left">Khánh Linh</div>
+          <span class="name-and">&</span>
+          <div class="name-right">Anh Tú</div>
+        </div>
+        <p>24 · 11 · 2026</p>
+        <p class="copyright">With love, always.</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
